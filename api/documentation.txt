@@ -3,3 +3,8 @@
 //     Multiply.js (c)Copyright 2016, Byte World inc. Some Rights Reserved     //
 //                                                                             //
 /////////////////////////////////////////////////////////////////////////////////
+
+Creators:
+OneStig
+
+Documentation Link:
