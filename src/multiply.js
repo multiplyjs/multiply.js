@@ -74,6 +74,66 @@ var Math = {
     return range;
   },
 
+  factorial: function(number) {
+    var totalNumber = 0;
+    var allNumbers = new array(number);
+    for (var i = 0; i < number; i++) {
+      allNumbers[i] = number - i;
+    }
+    for (var i = 0; i < number; i++) {
+      if (i == 0) {
+        totalNumber = number;
+      } else {
+        totalNumber = totalNumber * allNumbers[i];
+      }
+    }
+    return totalNumber;
+  }
+
+  mode: function(dataSet) {
+    var mode;
+
+    return mode;
+  },
+
+
+  sigma: function(number) {
+    var totalNumber = 0;
+    var allNumbers = new array(number);
+    for (var i = 0; i < number; i++) {
+      allNumbers[i] = number - i;
+    }
+    for (var i = 0; i < number; i++) {
+      if (i == 0) {
+        totalNumber = number;
+      } else {
+        totalNumber = totalNumber + allNumbers[i];
+      }
+    }
+    return totalNumber;
+  }
+
+  sort: function(order, numbers) {
+    var sortNumbers = numbers;
+    if (order = lth) {
+      sortNumbers.sort(function (a, b) {
+        return a - b;
+      });
+    } else if (order = htl) {
+      sortNumbers.sort(function (a, b) {
+        return b - a;
+      });
+    }
+  }
+
+  median: function(numbers) {
+    var sortedNumbers = Math.sort(Math.lth, numbers);
+    var numberAmount = sortedNumbers.length;
+    var even = Math.numberIsEven(numberAmount);
+  }
+
+  htl: "SRT//hl//8347ldiawmf",
+  lth: "SRT//lh//2453fjwldkd",
   q1: "IQR//q1//2424dfsesdf",
   q2: "IQR//q2//4375ljidlae",
   q3: "IQR//q3//7483dfsesdf",
