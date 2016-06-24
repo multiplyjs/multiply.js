@@ -127,10 +127,60 @@ var Math = {
   }
 
   median: function(numbers) {
-    var sortedNumbers = Math.sort(Math.lth, numbers);
+    var sortedNumbers = sort(lth, numbers);
     var numberAmount = sortedNumbers.length;
+    var median;
     var even = Math.numberIsEven(numberAmount);
-  }
+    if (even == true) {
+      var half = numberAmount / 2;
+      var first = numbers[half - 1];
+      var second = numbers[half];
+      var diff = second - first;
+      var subDiff = diff / 2;
+      median = first + subDiff;
+    } else if (even == false) {
+      var half = numberAmount / 2;
+      half--;
+      median = numbers[half];
+    }
+    return median;
+  },
+
+  iqr: function(returnType, dataSet) {
+    var rT = returnType;
+    var q1;
+    var q2;
+    var q3;
+    var iqr;
+    var completeArray;
+    var lessData = [];
+    var moreData = [];
+    q2 = Math.median(dataSet);
+    for (var i = 0; i < dataSet.length; i++) {
+      currentData = dataSet[i];
+      if (currentData < q2) {
+        lessData.unshift(currentData);
+      } else if (currentData > q2) {
+        moreData.unshift(currentData);
+      }
+    }
+
+    q1 = Math.median(lessData);
+    q3 = Math.median(moreData);
+    iqr = q3 - q1;
+    if (rT == Math.q1) {
+      return q1;
+    } else if (rt == Math.q2) {
+      return q2;
+    } else if (rt == Math.q3) {
+      return q3;
+    } else if (rt == Math.iqr) {
+      return iqr;
+    } else if (rt == Math.array) {
+      completeArray = [q1, q2, q3, q4, iqr];
+      return completeArray;
+    }
+  },
 
   htl: "SRT//hl//8347ldiawmf",
   lth: "SRT//lh//2453fjwldkd",
